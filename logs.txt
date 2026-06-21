@@ -1,0 +1,694 @@
+
+==> Audit <==
+┌─────────┬───────────────────┬──────────┬───────────┬─────────┬─────────────────────┬─────────────────────┐
+│ COMMAND │       ARGS        │ PROFILE  │   USER    │ VERSION │     START TIME      │      END TIME       │
+├─────────┼───────────────────┼──────────┼───────────┼─────────┼─────────────────────┼─────────────────────┤
+│ start   │ --driver=podman   │ minikube │ ganitagya │ v1.38.1 │ 21 Jun 26 07:39 +04 │                     │
+│ config  │ set rootless true │ minikube │ ganitagya │ v1.38.1 │ 21 Jun 26 07:40 +04 │ 21 Jun 26 07:40 +04 │
+│ start   │ --driver=podman   │ minikube │ ganitagya │ v1.38.1 │ 21 Jun 26 07:40 +04 │                     │
+└─────────┴───────────────────┴──────────┴───────────┴─────────┴─────────────────────┴─────────────────────┘
+
+
+==> Last Start <==
+Log file created at: 2026/06/21 07:40:22
+Running on machine: fedora
+Binary: Built with gc go1.25.5 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0621 07:40:22.983560   21634 out.go:360] Setting OutFile to fd 1 ...
+I0621 07:40:22.983717   21634 out.go:413] isatty.IsTerminal(1) = true
+I0621 07:40:22.983720   21634 out.go:374] Setting ErrFile to fd 2...
+I0621 07:40:22.983723   21634 out.go:413] isatty.IsTerminal(2) = true
+I0621 07:40:22.983849   21634 root.go:338] Updating PATH: /home/ganitagya/.minikube/bin
+I0621 07:40:22.984103   21634 out.go:368] Setting JSON to false
+I0621 07:40:22.985335   21634 start.go:134] hostinfo: {"hostname":"fedora","uptime":5412,"bootTime":1782007811,"procs":512,"os":"linux","platform":"fedora","platformFamily":"fedora","platformVersion":"44","kernelVersion":"7.0.12-201.fc44.x86_64","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"9851c79f-fea5-48f6-a238-88b7cd3bf088"}
+I0621 07:40:22.985365   21634 start.go:144] virtualization: kvm host
+I0621 07:40:22.992370   21634 out.go:179] 😄  minikube v1.38.1 on Fedora 44
+I0621 07:40:22.994432   21634 out.go:179]     ▪ MINIKUBE_ROOTLESS=true
+W0621 07:40:22.994561   21634 preload.go:371] Failed to list preload files: open /home/ganitagya/.minikube/cache/preloaded-tarball: no such file or directory
+I0621 07:40:22.994606   21634 notify.go:220] Checking for updates...
+I0621 07:40:22.996528   21634 driver.go:422] Setting default libvirt URI to qemu:///system
+I0621 07:40:23.018686   21634 podman.go:124] podman version: 5.8.2
+I0621 07:40:23.020630   21634 out.go:179] ✨  Using the podman driver based on user configuration
+I0621 07:40:23.022214   21634 start.go:310] selected driver: podman
+I0621 07:40:23.022217   21634 start.go:935] validating driver "podman" against <nil>
+I0621 07:40:23.022229   21634 start.go:946] status for podman: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0621 07:40:23.022271   21634 cli_runner.go:164] Run: podman system info --format json
+I0621 07:40:23.109584   21634 info.go:288] podman info: {Host:{BuildahVersion:1.43.1 CgroupVersion:v2 Conmon:{Package:conmon-2.2.1-2.fc44.x86_64 Path:/usr/bin/conmon Version:conmon version 2.2.1, commit: } Distribution:{Distribution:fedora Version:44} MemFree:52116000768 MemTotal:67016077312 OCIRuntime:{Name:crun Package:crun-1.28-1.fc44.x86_64 Path:/usr/bin/crun Version:crun version 1.28
+commit: 54f16ffbefcd022bf032af768b5c5ce075c18bfc
+rundir: /run/user/1000/crun
+spec: 1.0.0
++SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +LIBKRUN +WASM:wasmedge +JSON_C} SwapFree:8589930496 SwapTotal:8589930496 Arch:amd64 Cpus:16 Eventlogger:journald Hostname:fedora Kernel:7.0.12-201.fc44.x86_64 Os:linux Security:{Rootless:true} Uptime:1h 30m 11.00s (Approximately 0.04 days)} Registries:{Search:[registry.fedoraproject.org registry.access.redhat.com docker.io]} Store:{ConfigFile:/home/ganitagya/.config/containers/storage.conf ContainerStore:{Number:1} GraphDriverName:overlay GraphOptions:{} GraphRoot:/home/ganitagya/.local/share/containers/storage GraphStatus:{BackingFilesystem:btrfs NativeOverlayDiff:true SupportsDType:true UsingMetacopy:false} ImageStore:{Number:2} RunRoot:/run/user/1000/containers VolumePath:/home/ganitagya/.local/share/containers/storage/volumes}}
+W0621 07:40:23.109682   21634 out.go:285] ❗  Starting v1.39.0, minikube will default to "containerd" container runtime. See #21973 for more info.
+I0621 07:40:23.109702   21634 start_flags.go:332] no existing cluster config was found, will generate one from the flags 
+I0621 07:40:23.110475   21634 start_flags.go:416] Using suggested 15900MB memory alloc based on sys=63911MB, container=63911MB
+I0621 07:40:23.110602   21634 start_flags.go:1000] Wait components to verify : map[apiserver:true system_pods:true]
+I0621 07:40:23.116993   21634 out.go:179] 📌  Using rootless Podman driver
+I0621 07:40:23.119205   21634 cni.go:83] Creating CNI manager for ""
+I0621 07:40:23.119245   21634 cni.go:157] "podman" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0621 07:40:23.119251   21634 start_flags.go:341] Found "bridge CNI" CNI - setting NetworkPlugin=cni
+I0621 07:40:23.119302   21634 start.go:358] cluster config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:15900 CPUs:2 DiskSize:20000 Driver:podman HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates:KubeletInUserNamespace=true ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false}
+I0621 07:40:23.121044   21634 out.go:179] 👍  Starting "minikube" primary control-plane node in "minikube" cluster
+I0621 07:40:23.122521   21634 cache.go:135] Beginning downloading kic base image for podman with docker
+I0621 07:40:23.123947   21634 out.go:179] 🚜  Pulling base image v0.0.50 ...
+I0621 07:40:23.125464   21634 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0621 07:40:23.125537   21634 cache.go:164] Downloading gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 to local cache
+I0621 07:40:23.125652   21634 image.go:66] Checking for gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 in local cache directory
+I0621 07:40:23.125739   21634 image.go:151] Writing gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 to local cache
+I0621 07:40:24.445547   21634 preload.go:147] Found remote preload: https://storage.googleapis.com/minikube-preloaded-volume-tarballs/v18/v1.35.1/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4
+I0621 07:40:24.445599   21634 cache.go:66] Caching tarball of preloaded images
+I0621 07:40:24.446160   21634 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0621 07:40:24.453694   21634 out.go:179] 💾  Downloading Kubernetes v1.35.1 preload ...
+I0621 07:40:24.456494   21634 preload.go:268] Downloading preload from https://storage.googleapis.com/minikube-preloaded-volume-tarballs/v18/v1.35.1/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4
+I0621 07:40:24.456507   21634 preload.go:335] getting checksum for preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4 from gcs api...
+I0621 07:40:25.000414   21634 preload.go:312] Got checksum from GCS API "0196e6e2824ad229ae3d9d11863129d8"
+I0621 07:40:25.000622   21634 download.go:113] Downloading: https://storage.googleapis.com/minikube-preloaded-volume-tarballs/v18/v1.35.1/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4?checksum=md5:0196e6e2824ad229ae3d9d11863129d8 -> /home/ganitagya/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4
+I0621 07:40:46.914400   21634 cache.go:69] Finished verifying existence of preloaded tar for v1.35.1 on docker
+I0621 07:40:46.914592   21634 profile.go:143] Saving config to /home/ganitagya/.minikube/profiles/minikube/config.json ...
+I0621 07:40:46.914606   21634 lock.go:61] WriteFile acquiring /home/ganitagya/.minikube/profiles/minikube/config.json: {Name:mk41ac7ccac12693994e036c1ed60882627f6cdf Timeout:1m0s Delay:500ms}
+I0621 07:40:56.864939   21634 cache.go:167] successfully saved gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 as a tarball
+E0621 07:40:56.864965   21634 cache.go:239] Error downloading kic artifacts:  not yet implemented, see issue #8426
+I0621 07:40:56.864980   21634 cache.go:244] Successfully downloaded all kic artifacts
+I0621 07:40:56.865021   21634 start.go:359] acquireMachinesLock for minikube: {Name:mk76590ee0ae8fb1366cf616a5d7df9a73f0fff1 Timeout:10m0s Delay:500ms}
+I0621 07:40:56.865132   21634 start.go:363] duration metric: took 90.55µs to acquireMachinesLock for "minikube"
+I0621 07:40:56.865169   21634 start.go:92] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:15900 CPUs:2 DiskSize:20000 Driver:podman HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates:KubeletInUserNamespace=true ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false} &{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0621 07:40:56.865259   21634 start.go:124] createHost starting for "" (driver="podman")
+I0621 07:40:56.872366   21634 out.go:252] 🔥  Creating podman container (CPUs=2, Memory=15900MB) ...
+I0621 07:40:56.872692   21634 start.go:158] libmachine.API.Create for "minikube" (driver="podman")
+I0621 07:40:56.872714   21634 client.go:173] LocalClient.Create starting
+I0621 07:40:56.872887   21634 main.go:144] libmachine: Creating CA: /home/ganitagya/.minikube/certs/ca.pem
+I0621 07:40:56.893408   21634 main.go:144] libmachine: Creating client certificate: /home/ganitagya/.minikube/certs/cert.pem
+I0621 07:40:56.950531   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:40:56.965378   21634 cli_runner.go:164] Run: podman network inspect minikube --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}"
+W0621 07:40:56.984569   21634 cli_runner.go:211] podman network inspect minikube --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}" returned with exit code 125
+I0621 07:40:56.984607   21634 network_create.go:285] running [podman network inspect minikube] to gather additional debugging logs...
+I0621 07:40:56.984616   21634 cli_runner.go:164] Run: podman network inspect minikube
+W0621 07:40:57.003328   21634 cli_runner.go:211] podman network inspect minikube returned with exit code 125
+I0621 07:40:57.003342   21634 network_create.go:288] error running [podman network inspect minikube]: podman network inspect minikube: exit status 125
+stdout:
+[]
+
+stderr:
+Error: network minikube: unable to find network with name or ID minikube: network not found
+I0621 07:40:57.003353   21634 network_create.go:290] output of [podman network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Error: network minikube: unable to find network with name or ID minikube: network not found
+
+** /stderr **
+I0621 07:40:57.003386   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:40:57.022362   21634 cli_runner.go:164] Run: podman network inspect podman --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}"
+I0621 07:40:57.046184   21634 network.go:205] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 IsPrivate:true Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:} reservation:0xc00011c278}
+I0621 07:40:57.046205   21634 network_create.go:125] attempt to create podman network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 0 ...
+I0621 07:40:57.046238   21634 cli_runner.go:164] Run: podman network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+I0621 07:40:57.064205   21634 network_create.go:109] podman network minikube 192.168.49.0/24 created
+I0621 07:40:57.064219   21634 kic.go:120] calculated static IP "192.168.49.2" for the "minikube" container
+I0621 07:40:57.064258   21634 cli_runner.go:164] Run: podman ps -a --format {{.Names}}
+I0621 07:40:57.082524   21634 cli_runner.go:164] Run: podman volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+I0621 07:40:57.109288   21634 oci.go:102] Successfully created a podman volume minikube
+I0621 07:40:57.109333   21634 cli_runner.go:164] Run: podman run --rm --name minikube-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --entrypoint /usr/bin/test -v minikube:/var gcr.io/k8s-minikube/kicbase:v0.0.50 -d /var/lib
+I0621 07:40:57.361426   21634 oci.go:106] Successfully prepared a podman volume minikube
+I0621 07:40:57.361458   21634 preload.go:187] Checking if preload exists for k8s version v1.35.1 and runtime docker
+I0621 07:40:57.361465   21634 kic.go:193] Starting extracting preloaded images to volume ...
+I0621 07:40:57.361617   21634 cli_runner.go:164] Run: podman run --rm --entrypoint /usr/bin/tar --security-opt label=disable -v /home/ganitagya/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.35.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v minikube:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.50 -I lz4 -xf /preloaded.tar -C /extractDir
+I0621 07:40:58.257082   21634 kic.go:202] duration metric: took 895.610108ms to extract preloaded images to volume ...
+W0621 07:40:58.257192   21634 cgroups_linux.go:77] Your kernel does not support swap limit capabilities or the cgroup is not mounted.
+W0621 07:40:58.257208   21634 oci.go:251] Your kernel does not support CPU cfs period/quota or the cgroup is not mounted.
+I0621 07:40:58.257236   21634 cli_runner.go:164] Run: podman info --format "'{{json .SecurityOptions}}'"
+W0621 07:40:58.349846   21634 cli_runner.go:211] podman info --format "'{{json .SecurityOptions}}'" returned with exit code 125
+I0621 07:40:58.349948   21634 cli_runner.go:164] Run: podman run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname minikube --name minikube --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=minikube --network minikube --ip 192.168.49.2 --volume minikube:/var:exec --memory=15900mb -e container=podman --expose 8443 --publish=127.0.0.1::8443 --publish=127.0.0.1::22 --publish=127.0.0.1::2376 --publish=127.0.0.1::5000 --publish=127.0.0.1::32443 gcr.io/k8s-minikube/kicbase:v0.0.50
+I0621 07:40:58.579531   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Running}}
+I0621 07:40:58.605786   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:40:58.628670   21634 cli_runner.go:164] Run: podman exec minikube stat /var/lib/dpkg/alternatives/iptables
+I0621 07:40:58.756899   21634 oci.go:143] the created container "minikube" has a running status.
+I0621 07:40:58.756914   21634 kic.go:224] Creating ssh key for kic: /home/ganitagya/.minikube/machines/minikube/id_rsa...
+I0621 07:40:58.823657   21634 kic_runner.go:190] podman (temp): /home/ganitagya/.minikube/machines/minikube/id_rsa.pub --> /home/docker/.ssh/authorized_keys (381 bytes)
+I0621 07:40:58.825524   21634 kic_runner.go:261] Run: /usr/bin/podman cp /tmp/tmpf-memory-asset1329514972 minikube:/home/docker/.ssh/authorized_keys
+I0621 07:40:58.978296   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:40:59.035526   21634 kic_runner.go:92] Run: chown docker:docker /home/docker/.ssh/authorized_keys
+I0621 07:40:59.035538   21634 kic_runner.go:113] Args: [podman exec --privileged minikube chown docker:docker /home/docker/.ssh/authorized_keys]
+I0621 07:40:59.699175   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:40:59.723085   21634 machine.go:96] provisionDockerMachine start ...
+I0621 07:40:59.723208   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:40:59.739148   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:40:59.766267   21634 main.go:144] libmachine: Using SSH client type: native
+I0621 07:40:59.766569   21634 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 45559 <nil> <nil>}
+I0621 07:40:59.766575   21634 main.go:144] libmachine: About to run SSH command:
+hostname
+I0621 07:40:59.896312   21634 main.go:144] libmachine: SSH cmd err, output: <nil>: minikube
+
+I0621 07:40:59.896335   21634 ubuntu.go:182] provisioning hostname "minikube"
+I0621 07:40:59.896395   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:40:59.916406   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:40:59.939830   21634 main.go:144] libmachine: Using SSH client type: native
+I0621 07:40:59.940006   21634 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 45559 <nil> <nil>}
+I0621 07:40:59.940013   21634 main.go:144] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I0621 07:41:00.091401   21634 main.go:144] libmachine: SSH cmd err, output: <nil>: minikube
+
+I0621 07:41:00.091473   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:00.112073   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:41:00.136161   21634 main.go:144] libmachine: Using SSH client type: native
+I0621 07:41:00.136329   21634 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 45559 <nil> <nil>}
+I0621 07:41:00.136340   21634 main.go:144] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0621 07:41:00.274209   21634 main.go:144] libmachine: SSH cmd err, output: <nil>: 
+I0621 07:41:00.274230   21634 ubuntu.go:188] set auth options {CertDir:/home/ganitagya/.minikube CaCertPath:/home/ganitagya/.minikube/certs/ca.pem CaPrivateKeyPath:/home/ganitagya/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/ganitagya/.minikube/machines/server.pem ServerKeyPath:/home/ganitagya/.minikube/machines/server-key.pem ClientKeyPath:/home/ganitagya/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/ganitagya/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/ganitagya/.minikube}
+I0621 07:41:00.274255   21634 ubuntu.go:190] setting up certificates
+I0621 07:41:00.274266   21634 provision.go:83] configureAuth start
+I0621 07:41:00.274441   21634 cli_runner.go:164] Run: podman container inspect -f {{.NetworkSettings.IPAddress}} minikube
+I0621 07:41:00.304202   21634 cli_runner.go:164] Run: podman container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I0621 07:41:00.328470   21634 provision.go:142] copyHostCerts
+I0621 07:41:00.328531   21634 exec_runner.go:150] cp: /home/ganitagya/.minikube/certs/cert.pem --> /home/ganitagya/.minikube/cert.pem (1131 bytes)
+I0621 07:41:00.328704   21634 exec_runner.go:150] cp: /home/ganitagya/.minikube/certs/key.pem --> /home/ganitagya/.minikube/key.pem (1675 bytes)
+I0621 07:41:00.328795   21634 exec_runner.go:150] cp: /home/ganitagya/.minikube/certs/ca.pem --> /home/ganitagya/.minikube/ca.pem (1086 bytes)
+I0621 07:41:00.328860   21634 provision.go:116] generating server cert: /home/ganitagya/.minikube/machines/server.pem ca-key=/home/ganitagya/.minikube/certs/ca.pem private-key=/home/ganitagya/.minikube/certs/ca-key.pem org=ganitagya.minikube san=[127.0.0.1 192.168.49.2 localhost minikube]
+I0621 07:41:00.384350   21634 provision.go:176] copyRemoteCerts
+I0621 07:41:00.384414   21634 ssh_runner.go:194] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0621 07:41:00.384433   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:00.402905   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:41:00.427164   21634 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:45559 SSHKeyPath:/home/ganitagya/.minikube/machines/minikube/id_rsa Username:docker}
+I0621 07:41:00.527716   21634 ssh_runner.go:361] scp /home/ganitagya/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1086 bytes)
+I0621 07:41:00.549993   21634 ssh_runner.go:361] scp /home/ganitagya/.minikube/machines/server.pem --> /etc/docker/server.pem (1188 bytes)
+I0621 07:41:00.569950   21634 ssh_runner.go:361] scp /home/ganitagya/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I0621 07:41:00.585548   21634 provision.go:86] duration metric: took 311.267258ms to configureAuth
+I0621 07:41:00.585560   21634 ubuntu.go:206] setting minikube options for container-runtime
+I0621 07:41:00.585677   21634 config.go:183] Loaded profile config "minikube": Driver=podman, ContainerRuntime=docker, KubernetesVersion=v1.35.1
+I0621 07:41:00.585708   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:00.608297   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:41:00.630498   21634 main.go:144] libmachine: Using SSH client type: native
+I0621 07:41:00.630666   21634 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 45559 <nil> <nil>}
+I0621 07:41:00.630673   21634 main.go:144] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0621 07:41:00.770301   21634 main.go:144] libmachine: SSH cmd err, output: <nil>: overlay
+
+I0621 07:41:00.770311   21634 ubuntu.go:71] root file system type: overlay
+I0621 07:41:00.770408   21634 provision.go:313] Updating docker unit: /lib/systemd/system/docker.service ...
+I0621 07:41:00.770455   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:00.786224   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:41:00.810121   21634 main.go:144] libmachine: Using SSH client type: native
+I0621 07:41:00.810406   21634 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 45559 <nil> <nil>}
+I0621 07:41:00.810470   21634 main.go:144] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %s "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target nss-lookup.target docker.socket firewalld.service containerd.service time-set.target
+Wants=network-online.target containerd.service
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=always
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 \
+	-H fd:// --containerd=/run/containerd/containerd.sock \
+	-H unix:///var/run/docker.sock \
+	--default-ulimit=nofile=1048576:1048576 \
+	--tlsverify \
+	--tlscacert /etc/docker/ca.pem \
+	--tlscert /etc/docker/server.pem \
+	--tlskey /etc/docker/server-key.pem --label provider=podman --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0621 07:41:00.963300   21634 main.go:144] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target nss-lookup.target docker.socket firewalld.service containerd.service time-set.target
+Wants=network-online.target containerd.service
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=always
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=podman --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+
+I0621 07:41:00.963376   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:00.982336   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:41:01.003741   21634 main.go:144] libmachine: Using SSH client type: native
+I0621 07:41:01.004040   21634 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x906360] 0x909000 <nil>  [] 0s} 127.0.0.1 45559 <nil> <nil>}
+I0621 07:41:01.004056   21634 main.go:144] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0621 07:41:01.851326   21634 main.go:144] libmachine: SSH cmd err, output: Process exited with status 1: --- /lib/systemd/system/docker.service	2026-02-02 17:15:49.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2026-06-21 03:41:00.961405314 +0000
+@@ -9,23 +9,34 @@
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutStartSec=0
+-RestartSec=2
+ Restart=always
+ 
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=podman --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
++
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
++LimitNOFILE=infinity
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xeu docker.service" for details.
+
+I0621 07:41:01.851339   21634 ubuntu.go:208] Error setting container-runtime options during provisioning ssh command error:
+command : sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+err     : Process exited with status 1
+output  : --- /lib/systemd/system/docker.service	2026-02-02 17:15:49.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2026-06-21 03:41:00.961405314 +0000
+@@ -9,23 +9,34 @@
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutStartSec=0
+-RestartSec=2
+ Restart=always
+ 
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=podman --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
++
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
++LimitNOFILE=infinity
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xeu docker.service" for details.
+I0621 07:41:01.851348   21634 machine.go:99] duration metric: took 2.12825469s to provisionDockerMachine
+I0621 07:41:01.851355   21634 client.go:176] duration metric: took 4.978637951s to LocalClient.Create
+I0621 07:41:03.852382   21634 ssh_runner.go:194] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0621 07:41:03.852452   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:03.878607   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0621 07:41:03.903150   21634 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:45559 SSHKeyPath:/home/ganitagya/.minikube/machines/minikube/id_rsa Username:docker}
+I0621 07:41:04.003124   21634 ssh_runner.go:194] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I0621 07:41:04.010739   21634 start.go:127] duration metric: took 7.145466869s to createHost
+I0621 07:41:04.010753   21634 start.go:82] releasing machines lock for "minikube", held for 7.145612538s
+W0621 07:41:04.010786   21634 start.go:726] error starting host: creating host: create: provisioning: ssh command error:
+command : sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+err     : Process exited with status 1
+output  : --- /lib/systemd/system/docker.service	2026-02-02 17:15:49.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2026-06-21 03:41:00.961405314 +0000
+@@ -9,23 +9,34 @@
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutStartSec=0
+-RestartSec=2
+ Restart=always
+ 
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=podman --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
++
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
++LimitNOFILE=infinity
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xeu docker.service" for details.
+I0621 07:41:04.011243   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:41:04.041361   21634 stop.go:39] StopHost: minikube
+W0621 07:41:04.041639   21634 register.go:133] "Stopping" was not found within the registered steps for "Initial Minikube Setup": [Initial Minikube Setup Selecting Driver Downloading Artifacts Starting Node Updating Driver Pulling Base Image Running on Localhost Local OS Release Creating Container Creating VM Running Remotely Preparing Kubernetes Generating certificates Booting control plane Configuring RBAC rules Configuring CNI Configuring Localhost Environment Verifying Kubernetes Enabling Addons Done]
+I0621 07:41:04.058673   21634 out.go:179] ✋  Stopping node "minikube"  ...
+I0621 07:41:04.060559   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+W0621 07:41:04.096994   21634 register.go:133] "PowerOff" was not found within the registered steps for "Initial Minikube Setup": [Initial Minikube Setup Selecting Driver Downloading Artifacts Starting Node Updating Driver Pulling Base Image Running on Localhost Local OS Release Creating Container Creating VM Running Remotely Preparing Kubernetes Generating certificates Booting control plane Configuring RBAC rules Configuring CNI Configuring Localhost Environment Verifying Kubernetes Enabling Addons Done]
+I0621 07:41:04.098847   21634 out.go:179] 🛑  Powering off "minikube" via SSH ...
+I0621 07:41:04.100399   21634 cli_runner.go:164] Run: podman exec --privileged -t minikube /bin/bash -c "sudo init 0"
+I0621 07:41:05.304707   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:41:05.332714   21634 oci.go:666] container minikube status is Stopped
+I0621 07:41:05.332733   21634 oci.go:678] Successfully shutdown container minikube
+I0621 07:41:05.332738   21634 stop.go:96] shutdown container: err=<nil>
+I0621 07:41:05.332763   21634 main.go:144] libmachine: Stopping "minikube"...
+I0621 07:41:05.332840   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:41:05.357071   21634 stop.go:66] stop err: Machine "minikube" is already stopped.
+I0621 07:41:05.357087   21634 stop.go:69] host is already stopped
+W0621 07:41:06.357483   21634 register.go:133] "PowerOff" was not found within the registered steps for "Initial Minikube Setup": [Initial Minikube Setup Selecting Driver Downloading Artifacts Starting Node Updating Driver Pulling Base Image Running on Localhost Local OS Release Creating Container Creating VM Running Remotely Preparing Kubernetes Generating certificates Booting control plane Configuring RBAC rules Configuring CNI Configuring Localhost Environment Verifying Kubernetes Enabling Addons Done]
+I0621 07:41:06.366673   21634 out.go:179] 🔥  Deleting "minikube" in podman ...
+I0621 07:41:06.369442   21634 cli_runner.go:164] Run: podman container inspect -f {{.Id}} minikube
+I0621 07:41:06.395143   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:41:06.415939   21634 cli_runner.go:164] Run: podman exec --privileged -t minikube /bin/bash -c "sudo init 0"
+W0621 07:41:06.440582   21634 cli_runner.go:211] podman exec --privileged -t minikube /bin/bash -c "sudo init 0" returned with exit code 255
+I0621 07:41:06.440603   21634 oci.go:658] error shutdown minikube: podman exec --privileged -t minikube /bin/bash -c "sudo init 0": exit status 255
+stdout:
+
+stderr:
+Error: can only create exec sessions on running containers: container state improper
+I0621 07:41:07.441138   21634 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0621 07:41:07.470029   21634 oci.go:666] container minikube status is Stopped
+I0621 07:41:07.470055   21634 oci.go:678] Successfully shutdown container minikube
+I0621 07:41:07.470100   21634 cli_runner.go:164] Run: podman rm -f -v minikube
+I0621 07:41:07.513661   21634 cli_runner.go:164] Run: podman container inspect -f {{.Id}} minikube
+W0621 07:41:07.530032   21634 cli_runner.go:211] podman container inspect -f {{.Id}} minikube returned with exit code 125
+I0621 07:41:07.530083   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:07.546983   21634 cli_runner.go:164] Run: podman network inspect minikube --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}"
+I0621 07:41:07.568860   21634 cli_runner.go:164] Run: podman network rm minikube
+W0621 07:41:07.591243   21634 out.go:285] 🤦  StartHost failed, but will try again: creating host: create: provisioning: ssh command error:
+command : sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+err     : Process exited with status 1
+output  : --- /lib/systemd/system/docker.service	2026-02-02 17:15:49.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2026-06-21 03:41:00.961405314 +0000
+@@ -9,23 +9,34 @@
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutStartSec=0
+-RestartSec=2
+ Restart=always
+ 
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 	-H fd:// --containerd=/run/containerd/containerd.sock 	-H unix:///var/run/docker.sock 	--default-ulimit=nofile=1048576:1048576 	--tlsverify 	--tlscacert /etc/docker/ca.pem 	--tlscert /etc/docker/server.pem 	--tlskey /etc/docker/server-key.pem --label provider=podman --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
++
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
++LimitNOFILE=infinity
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xeu docker.service" for details.
+
+I0621 07:41:07.591291   21634 start.go:742] Will try again in 5 seconds ...
+I0621 07:41:12.594245   21634 start.go:359] acquireMachinesLock for minikube: {Name:mk76590ee0ae8fb1366cf616a5d7df9a73f0fff1 Timeout:10m0s Delay:500ms}
+I0621 07:41:12.594498   21634 start.go:363] duration metric: took 140.549µs to acquireMachinesLock for "minikube"
+I0621 07:41:12.594544   21634 start.go:92] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.50@sha256:eb4fec00e8ad70adf8e6436f195cc429825ffb85f95afcdb5d8d9deb576f3e93 Memory:15900 CPUs:2 DiskSize:20000 Driver:podman HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.35.1 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates:KubeletInUserNamespace=true ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false} &{Name: IP: Port:8443 KubernetesVersion:v1.35.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0621 07:41:12.594698   21634 start.go:124] createHost starting for "" (driver="podman")
+I0621 07:41:12.600891   21634 out.go:252] 🔥  Creating podman container (CPUs=2, Memory=15900MB) ...
+I0621 07:41:12.601112   21634 start.go:158] libmachine.API.Create for "minikube" (driver="podman")
+I0621 07:41:12.601144   21634 client.go:173] LocalClient.Create starting
+I0621 07:41:12.601298   21634 main.go:144] libmachine: Reading certificate data from /home/ganitagya/.minikube/certs/ca.pem
+I0621 07:41:12.601409   21634 main.go:144] libmachine: Decoding PEM data...
+I0621 07:41:12.601441   21634 main.go:144] libmachine: Parsing certificate...
+I0621 07:41:12.601505   21634 main.go:144] libmachine: Reading certificate data from /home/ganitagya/.minikube/certs/cert.pem
+I0621 07:41:12.601527   21634 main.go:144] libmachine: Decoding PEM data...
+I0621 07:41:12.601726   21634 main.go:144] libmachine: Parsing certificate...
+I0621 07:41:12.602584   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:12.621253   21634 cli_runner.go:164] Run: podman network inspect minikube --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}"
+W0621 07:41:12.641431   21634 cli_runner.go:211] podman network inspect minikube --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}" returned with exit code 125
+I0621 07:41:12.641484   21634 network_create.go:285] running [podman network inspect minikube] to gather additional debugging logs...
+I0621 07:41:12.641499   21634 cli_runner.go:164] Run: podman network inspect minikube
+W0621 07:41:12.659030   21634 cli_runner.go:211] podman network inspect minikube returned with exit code 125
+I0621 07:41:12.659053   21634 network_create.go:288] error running [podman network inspect minikube]: podman network inspect minikube: exit status 125
+stdout:
+[]
+
+stderr:
+Error: network minikube: unable to find network with name or ID minikube: network not found
+I0621 07:41:12.659060   21634 network_create.go:290] output of [podman network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Error: network minikube: unable to find network with name or ID minikube: network not found
+
+** /stderr **
+I0621 07:41:12.659099   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:12.678645   21634 cli_runner.go:164] Run: podman network inspect podman --format "{{range .}}{{if eq .Driver "bridge"}}{{(index .Subnets 0).Subnet}},{{(index .Subnets 0).Gateway}}{{end}}{{end}}"
+I0621 07:41:12.699481   21634 network.go:205] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 IsPrivate:true Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:} reservation:0xc0007ac4a8}
+I0621 07:41:12.699496   21634 network_create.go:125] attempt to create podman network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 0 ...
+I0621 07:41:12.699520   21634 cli_runner.go:164] Run: podman network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+I0621 07:41:12.719941   21634 network_create.go:109] podman network minikube 192.168.49.0/24 created
+I0621 07:41:12.719956   21634 kic.go:120] calculated static IP "192.168.49.2" for the "minikube" container
+I0621 07:41:12.719997   21634 cli_runner.go:164] Run: podman ps -a --format {{.Names}}
+I0621 07:41:12.740168   21634 cli_runner.go:164] Run: podman volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+W0621 07:41:12.756530   21634 cli_runner.go:211] podman volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true returned with exit code 125
+I0621 07:41:12.756553   21634 client.go:176] duration metric: took 155.403372ms to LocalClient.Create
+I0621 07:41:14.757026   21634 ssh_runner.go:194] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0621 07:41:14.757096   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:14.778331   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:14.795372   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+I0621 07:41:14.795409   21634 retry.go:85] will retry after 200ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 125
+stdout:
+
+stderr:
+Error: no such container "minikube"
+I0621 07:41:15.027994   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:15.049638   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:15.069873   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+I0621 07:41:15.345252   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:15.367200   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:15.383118   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+I0621 07:41:16.151896   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:16.173280   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:16.191163   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+W0621 07:41:16.191195   21634 start.go:267] error running df -h /var: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 125
+stdout:
+
+stderr:
+Error: no such container "minikube"
+
+W0621 07:41:16.191200   21634 start.go:234] error getting percentage of /var that is free: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 125
+stdout:
+
+stderr:
+Error: no such container "minikube"
+I0621 07:41:16.191233   21634 ssh_runner.go:194] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I0621 07:41:16.191252   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:16.206681   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:16.223123   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+I0621 07:41:16.385002   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:16.406099   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:16.421616   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+I0621 07:41:16.877548   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:16.901512   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:16.917026   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+I0621 07:41:17.543255   21634 cli_runner.go:164] Run: podman version --format {{.Version}}
+I0621 07:41:17.567611   21634 cli_runner.go:164] Run: podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0621 07:41:17.585954   21634 cli_runner.go:211] podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 125
+W0621 07:41:17.585990   21634 start.go:282] error running df -BG /var: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 125
+stdout:
+
+stderr:
+Error: no such container "minikube"
+
+W0621 07:41:17.585995   21634 start.go:239] error getting GiB of /var that is available: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": podman container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 125
+stdout:
+
+stderr:
+Error: no such container "minikube"
+I0621 07:41:17.586001   21634 start.go:127] duration metric: took 4.991291457s to createHost
+I0621 07:41:17.586006   21634 start.go:82] releasing machines lock for "minikube", held for 4.991495172s
+W0621 07:41:17.586057   21634 out.go:285] 😿  Failed to start podman container. Running "minikube delete" may fix it: creating host: create: creating: setting up container node: creating volume for minikube container: podman volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true: exit status 125
+stdout:
+
+stderr:
+Error: volume with name minikube already exists: volume already exists
+
+I0621 07:41:17.603380   21634 out.go:203] 
+W0621 07:41:17.618810   21634 out.go:285] ❌  Exiting due to GUEST_PROVISION: error provisioning guest: Failed to start host: creating host: create: creating: setting up container node: creating volume for minikube container: podman volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true: exit status 125
+stdout:
+
+stderr:
+Error: volume with name minikube already exists: volume already exists
+
+W0621 07:41:17.618871   21634 out.go:285] 
+W0621 07:41:17.619452   21634 out.go:308] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I0621 07:41:17.632818   21634 out.go:203] 
+
+
