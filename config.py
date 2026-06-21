@@ -14,6 +14,13 @@ class Settings(BaseSettings):
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
 
+    # S3 Configuration
+    minio_bucket_name: str
+    minio_region: str 
+    minio_access_key_id: SecretStr | None = None
+    minio_secret_access_key: SecretStr | None = None
+    minio_endpoint_url: str | None = None
+
     max_upload_size_bytes: int = 5 * 1024 * 1024
 
     posts_per_page: int = 10
