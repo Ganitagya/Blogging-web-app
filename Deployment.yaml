@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blogging-app-deployment
+  namespace: core-app
+  labels:
+    app: blogging-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blogging-app
+  template:
+    metadata:
+      labels:
+        app: blogging-app
+    spec:
+      containers:
+        - name: app-container
+          image: localhost/blogging-app:v1.0
+          # CRITICAL: Forces Kubernetes to pull directly from the local Minikube cache
+          imagePullPolicy: IfNotPresent 
+          ports:
+            - containerPort: 8080
+          
+          # Environment Variable Overrides to point to internal cluster services
+          # env:
+          #   - name: DB_HOST
+          #     value: "akash-postgresql.core-infra.svc.cluster.local"
+          #   - name: MINIO_HOST
+          #     value: "minio.core-infra.svc.cluster.local"
+          
+          # Injects all remaining secret values (passwords, tokens) from your K8s secret
+          envFrom:
+            - secretRef:
+                name: blogging-app-secrets
